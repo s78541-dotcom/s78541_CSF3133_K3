@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Hackathon 2026</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Faculty Hackathon 2026</h1>
+        <p>Innovate, Code, and Build the Future in One Day!</p>
+    </header>
+
+    <!-- Navigation Bar with Internal Links -->
+    <nav>
+        <a href="#about">About the Event</a> | 
+        <a href="#schedule">Event Schedule</a> | 
+        <a href="#register">Registration</a>
+    </nav>
+
+    <hr>
+
+    <!-- Section 1: About the Event -->
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <article>
+            <h3>Keynote Speaker: Dr. Ron Weasley</h3>
+            <p>Dr. Weasley will present on recent advancements in Artificial Intelligence and Web Technologies.</p>
+        </article>
+
+        <article>
+            <h3>Featured Activity: Rapid Prototyping Workshop</h3>
+            <p>A hands-on session guiding students through building functional web applications under time pressure.</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <!-- Section 2: Event Schedule Table -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 AM - 09:00 AM</td>
+                    <td>Participant Registration &amp; Breakfast</td>
+                    <td>UMTCC</td>
+                    <td>Oliver Wood </td>
+                </tr>
+                <tr>
+                    <td>09:00 AM - 10:30 AM</td>
+                    <td>Keynote Address &amp; Briefing</td>
+                    <td rowspan="2">Auditorium Sulaiman</td> <!-- rowspan used across two consecutive sessions in the same venue -->
+                    <td>Dr. Cedric Diggory </td>
+                </tr>
+                <tr>
+                    <td>10:30 AM - 12:30 PM</td>
+                    <td>Hackathon Coding Session 1</td>
+                    <td>Dr. Luna Lovegood </td>
+                </tr>
+                <tr>
+                    <td>12:30 PM - 02:00 PM</td>
+                    <td colspan="3">Lunch Break &amp; Networking</td> <!-- colspan used across Activity, Venue, and Person in Charge -->
+                </tr>
+                <tr>
+                    <td>02:00 PM - 05:00 PM</td>
+                    <td>Hackathon Coding Session 2</td>
+                    <td>BYOD 1 &amp; Auditorium PSNZ</td>
+                    <td>Dr. Luna Lovegood </td>
+                </tr>
+                <tr>
+                    <td>05:00 PM - 06:00 PM</td>
+                    <td>Project Presentation &amp; Closing Ceremony</td>
+                    <td>Auditorium Sulaiman</td>
+                    <td>Organising Committee</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- Section 3: Registration Form -->
+    <section id="register">
+        <h2>Registration Form</h2>
+        
+        <form action="register.html" method="post">
+            
+            <!-- Text Inputs -->
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Radio Buttons (Year of Study) -->
+            <p>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year" value="1">
+                <label for="year1">Year 1</label><br>
+
+                <input type="radio" id="year2" name="year" value="2">
+                <label for="year2">Year 2</label><br>
+
+                <input type="radio" id="year3" name="year" value="3">
+                <label for="year3">Year 3</label><br>
+
+                <input type="radio" id="year4" name="year" value="4">
+                <label for="year4">Year 4</label>
+            </p>
+
+            <!-- Checkboxes (Sessions to Join) -->
+            <p>
+                <label>Sessions to Join:</label><br>
+                <input type="checkbox" id="session1" name="sessions" value="keynote">
+                <label for="session1">Keynote Address</label><br>
+
+                <input type="checkbox" id="session2" name="sessions" value="workshop">
+                <label for="session2">Rapid Prototyping Workshop</label><br>
+
+                <input type="checkbox" id="session3" name="sessions" value="hackathon">
+                <label for="session3">Hackathon Competition</label>
+            </p>
+
+            <!-- Drop-down List -->
+            <p>
+                <label for="programme">Programme / Faculty:</label><br>
+                <select id="programme" name="programme">
+                    <option value="cs">Software Engineering</option>
+                    <option value="net">Computer Networking</option>
+                    <option value="ds">Data Science</option>
+                    <option value="it">Information Technology</option>
+                </select>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <input type="submit" value="Register Now">
+            </p>
+
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Organised by: Faculty of Computer Science and Mathematics, UMT</p>
+        <p>&copy; 2026 Faculty Hackathon. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

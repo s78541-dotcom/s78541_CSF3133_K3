@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Page</title>
+</head>
+<body>
+
+    <!-- 3. Semantic HTML Structure: <header> -->
+    <header>
+        <h1>Welcome to My Personal Profile Page</h1>
+    </header>
+
+    <!-- 3. Semantic HTML Structure: <nav> -->
+    <nav>
+        <a href="#about">About Me</a> | 
+        <a href="#info">Personal Info</a> | 
+        <a href="#form">Contact / Survey</a>
+    </nav>
+
+    <hr>
+
+    <!-- 3. Semantic HTML Structure: <section> -->
+    <section id="about">
+        <!-- 3. Semantic HTML Structure: <article> -->
+        <article>
+            <h2>About Me</h2>
+            <p>Hello! Welcome to my personal profile page created for CSF3133: Web-Based Interface Design. Below you can find my details and a quick interactive form.</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <section id="info">
+        <h2>Personal Details</h2>
+        <!-- 1. Table with at least 3 rows and 3 columns -->
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Occupation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nabil Naim </td>
+                    <td>23</td>
+                    <td>Lawyer </td>
+                </tr>
+                <tr>
+                    <td>Amrun Hariz </td>
+                    <td>18 </td>
+                    <td>Part Time Worker </td>
+                </tr>
+                <tr>
+                    <td>Dinie Yasmin </td>
+                    <td>20</td>
+                    <td>Student </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- 2. Simple Form: text input, radio buttons, checkboxes, and submit button -->
+    <section id="form">
+        <h2>User Information Form</h2>
+        <form action="#" method="post">
+            
+            <!-- Text Input: Name -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <!-- Text Input: Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <!-- Radio Buttons: Gender -->
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+
+            <!-- Checkboxes: Favorite Hobbies -->
+            <label>Favorite Hobbies:</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">Reading</label><br>
+            <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+            <label for="gaming">Gaming</label><br>
+            <input type="checkbox" id="sports" name="hobbies" value="sports">
+            <label for="sports">Sports</label><br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- 3. Semantic HTML Structure: <footer> -->
+    <footer>
+        <p>Copyright &copy; 2024 My Web Page</p>
+    </footer>
+
+</body>
+</html>

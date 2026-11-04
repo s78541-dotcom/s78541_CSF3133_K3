@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+<!-- 
+    LIST OF IDENTIFIED AND FIXED ERRORS (PART 1):
+    - Error 1 (Line 1): Incomplete doctype tag <!DOCTYPE>. Fixed to <!DOCTYPE html>.
+    - Error 2 (Line 9): Improperly nested tags <h1><span>...</h1></span>. Fixed to <h1><span>...</span></h1>.
+    - Error 3 (Line 11 & 36): Content area used inline element <span id="content"> containing block elements (h2, p, form). Changed to <div id="content">.
+    - Error 4 (Line 13): HTML Entity &amp staff! missing semicolon. Fixed to &amp; staff!.
+    - Error 5 (Line 13-14): Form's oninput concatenation string concatenation issue ("adult.value + child.value"). Fixed using parseInt() to sum numbers instead of string joining.
+    - Error 6 (Line 18): Typo in input type="emial". Fixed to type="email".
+    - Error 7 (Line 23-24): Datalist id="movielist" mismatched with input list="movies". Fixed datalist id to "movies".
+    - Error 8 (Line 32-33): Range slider attributes reversed min="5" max="1" and unclosed input tag. Fixed to min="1" max="5".
+    - Error 9 (Line 34): Output 'for' attribute referenced non-existent id 'kid'. Fixed for="adult child".
+    - Error 10 (Line 38): Entity &Copy; used uppercase 'C'. HTML entities are case-sensitive; fixed to &copy;.
+-->
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+        <!-- Extended Form with Output Calculators -->
+        <form action="booking.php" oninput="
+            total.value = parseInt(adult.value || 0) + parseInt(child.value || 0);
+            price.value = (parseInt(adult.value || 0) * 12) + (parseInt(child.value || 0) * 8);
+        ">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+            <!-- Part 2 Extension: Phone number input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br><br>
+
+            <label for="date">Show date: </label>
+            <input type="date" id="date" name="date"><br><br>
+
+            <!-- Part 2 Extension: Show time input -->
+            <label for="time">Show time: </label>
+            <input type="time" id="time" name="time"><br><br>
+
+            <label for="movie">Movie:</label>
+            <input id="movie" name="movie" list="movies" placeholder="Select or type movie">
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+            </datalist><br><br>
+
+            <label for="adult">Adult tickets (RM 12):</label>
+            <input type="number" id="adult" name="adult" min="0" value="0"><br><br>
+
+            <label for="child">Child tickets (RM 8):</label>
+            <input type="number" id="child" name="child" min="0" value="0"><br><br>
+
+            <label for="rating">Rate our service: </label>
+            <input type="range" id="rating" name="rating" min="1" max="5"><br><br>
+
+            <!-- Outputs -->
+            Total tickets: <output name="total" for="adult child">0</output><br>
+            Total Price: RM <output name="price" for="adult child">0</output><br><br>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+
+    <!-- Part 2 Extension: Sidebar Section -->
+    <div id="sidebar">
+        <h3>Now Showing</h3>
+        <ul>
+            <li>
+                <strong>Jumanji Open World</strong> - <span>PG-13</span> 
+                (<a href="https://youtu.be/nIw1O3zvOfE?si=9vRnYJWvyq7fvNEO" target="_blank">Watch Trailer</a>)
+            </li>
+            <li>
+                <strong>Whalefall </strong> - <span>P13</span> 
+                (<a href="https://share.google/JCNnuIVLXByWJOxDb" target="_blank">Watch Trailer</a>)
+            </li>
+            <li>
+                <strong>Ghost in The Cell</strong> - <span>18</span> 
+                (<a href="https://share.google/cB0yamUYaujcFXzgk" target="_blank">Watch Trailer</a>)
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>e-Ticket&reg; - Campus Cinema &lt; RM10 every Tuesday &nbsp;|&nbsp; &copy; 2026 CineKampus. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

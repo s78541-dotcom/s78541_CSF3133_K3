@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Contact Form & Calculator</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div>
+        <h1>Get in Touch</h1>
+        <span>We would love to hear from you!</span>
+    </div>
+
+    <hr>
+
+    <!-- Content Section: Contact Form -->
+    <div>
+        <h2>Contact Form</h2>
+        <form>
+            <label for="userEmail">Email Address:</label><br>
+            <input type="email" id="userEmail" name="email" placeholder="name@example.com" required><br><br>
+
+            <label for="contactDate">Preferred Contact Date:</label><br>
+            <input type="date" id="contactDate" name="preferredDate"><br><br>
+
+            <label for="satisfaction">Satisfaction Level (0 to 10):</label><br>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" value="5"><br><br>
+
+            <input type="submit" value="Submit Inquiry">
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Content Section: Inline Calculator -->
+    <div>
+        <h2>Quick Calculator</h2>
+        <form oninput="sum.value = parseInt(num1.value || 0) + parseInt(num2.value || 0)">
+            <label for="num1">First Number:</label><br>
+            <input type="number" id="num1" name="num1" value="0"><br><br>
+
+            <label for="num2">Second Number:</label><br>
+            <input type="number" id="num2" name="num2" value="0"><br><br>
+
+            <strong>Result: </strong>
+            <output name="sum" for="num1 num2">0</output>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <div>
+        <p>Contact Us: info@example.com | Phone: +60 143693462</p>
+        <p>Copyright &copy; 2026 My Website. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfefe;
+}
+
+header, section, footer {
+    width: 90%;
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+/* Navigation Bar Styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #6e2c00;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    background-color: #6e2c00;
+    color: #ffffff !important;
+    padding: 12px 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #d35400;
+}
+
+/* Menu Item & Promotion Styling */
+.item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #7f8c8d;
+    margin-right: 6px;
+}
+
+/* Responsive Video */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Feedback Form Styling */
+.feedback-form {
+    background-color: #fdebd0;
+    padding: 20px;
+    border: 1px solid #e67e22;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,196 @@
+/* General Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #e2e8f0 100%);
+    color: #1e293b;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(120deg, #003366, #006699);
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    border-bottom: 5px solid #f59e0b; /* Gold accent reflecting UMT branding */
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    color: #bae6fd;
+    font-weight: 600;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 1rem 1.75rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1000px;
+    width: 92%;
+    margin: 2.5rem auto;
+    flex: 1;
+}
+
+.content-card {
+    background-color: #ffffff;
+    padding: 2.25rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.08);
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #003366;
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    color: #334155;
+}
+
+/* Table Styling (Rubric: Borders, alternating rows, padding, hover effects) */
+.table-container {
+    margin-top: 2.25rem;
+    overflow-x: auto; /* Ensures responsiveness on smaller screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+th, td {
+    border: 1px solid #cbd5e1;
+    padding: 14px 16px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #004c8c;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+/* Table Row Hover Effect */
+tbody tr {
+    transition: background-color 0.25s ease;
+}
+
+tbody tr:hover {
+    background-color: #bae6fd;
+}
+
+/* Contact Section */
+.contact-box p {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.contact-box a {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    border-top: 3px solid #0284c7;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-card {
+        padding: 1.5rem;
+    }
+
+    p {
+        text-align: left;
+    }
+}

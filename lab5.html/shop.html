@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bookstore</title>
+    <!-- Part 2: Link two Google Fonts (Roboto & Merriweather) in the same <link> tag -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+<!--
+    Part 1: Identified Errors in Original Code
+    Error 1 (shop.html, Line 6): Google Fonts URL used old '/css?' endpoint with CSS2 syntax ('wght@400;700'); fixed to '/css2?'.
+    Error 2 (shop.html, Line 7): Wrong attribute value rel="stylesheets" (plural); fixed to rel="stylesheet".
+    Error 3 (shop.html, Line 10): <style> tag was placed inside <body> instead of <head>; moved to <head>.
+    Error 4 (shop.html, Line 18): Invalid inline CSS syntax style="color=#1B4F72;" using '=' instead of ':'; fixed to use ':' (and updated to white inside header per Part 2).
+    Error 5 (shop.html, Line 20): Table id was id="product" while CSS targeted #products; matched both to id="products".
+    Error 6 (shop.css, Line 2): Misspelled font name 'Robotto'; fixed to 'Roboto'.
+    Error 7 (shop.css, Line 4): Invalid property value background-repeat: no repeat (missing hyphen); fixed to no-repeat.
+    Error 8 (shop.css, Line 5): Misspelled property name bacground-position; fixed to background-position.
+    Error 9 (shop.css, Line 18): li a had display: inline instead of display: block, preventing vertical padding from working properly; fixed to display: block.
+    Error 10 (shop.css, Line 23): Invalid pseudo-class selector li:a:hover; fixed to li a:hover.
+    Error 11 (shop.css, Line 26): Invalid property value border-collapse: collapsed; fixed to border-collapse: collapse.
+    Error 12 (shop.css, Line 34): nth-child(2) only styled the 2nd row instead of all even rows; fixed to nth-child(even).
+    Error 13 (shop.css, Line 37): Invalid pseudo-class selector #products tr:hovered; fixed to #products tr:hover.
+    Error 14 (shop.css, Line 45): Missing semicolon after background-color: #f1f1f1; added semicolon.
+-->
+
+    <!-- Part 2: Header with background image and white text -->
+    <header id="home">
+        <h1>Campus Bookstore</h1>
+        <p class="tagline">Your one-stop hub for academic resources</p>
+    </header>
+
+    <!-- Part 2: Semantic Navigation Bar with .active class -->
+    <nav>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Part 2: Semantic Main Content -->
+    <main>
+        <section id="books">
+            <h2>Featured Items</h2>
+            <p>Textbooks, stationery and more for every student.</p>
+
+            <table id="products">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th class="price-col">Price (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Design Basics</td>
+                        <td>Textbook</td>
+                        <td class="price-col">45.00</td>
+                    </tr>
+                    <tr>
+                        <td>A4 Notebook</td>
+                        <td>Stationery</td>
+                        <td class="price-col">6.50</td>
+                    </tr>
+                    <tr>
+                        <td>USB Drive 32GB</td>
+                        <td>Gadget</td>
+                        <td class="price-col">25.00</td>
+                    </tr>
+                    <tr>
+                        <td>Highlighter Set</td>
+                        <td>Stationery</td>
+                        <td class="price-col">9.90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Part 2: Semantic Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 Campus Bookstore &middot; Contact: bookstore@umt.edu.my</p>
+    </footer>
+
+</body>
+</html>

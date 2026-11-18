@@ -1,0 +1,120 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Headings Typography (Second Google Font) */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Header Section with Background Image */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header .tagline {
+    margin: 0;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+/* Horizontal Navigation Bar Styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+/* Active Navigation Link */
+nav li a.active {
+    background-color: #04AA6D;
+}
+
+/* Main Content Layout & Paragraph Readability */
+main {
+    width: 90%;
+    max-width: 960px;
+    margin: 25px auto 40px auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Products Table Styling */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    margin-top: 15px;
+}
+
+#products td,
+#products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Table Header Styling */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Alternating Row Colours */
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table Row Hover Effect */
+#products tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Right-Aligned Price Column */
+#products td.price-col {
+    text-align: right;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 14px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
